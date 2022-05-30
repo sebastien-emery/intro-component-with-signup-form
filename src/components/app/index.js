@@ -1,11 +1,14 @@
+// import components :
 import AppHeader from '../AppHeader';
 import AppFooter from '../AppFooter';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <AppHeader />
-      <AppFooter />
+      <main>
+        <AppHeader />
+        <AppFooter />
+      </main>
     </div>
   );
 }
