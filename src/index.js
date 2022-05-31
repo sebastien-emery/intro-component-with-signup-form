@@ -1,4 +1,4 @@
-import { render } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { StrictMode } from 'react';
 import App from './components/app';
 // import reportWebVitals from './reportWebVitals';
@@ -11,7 +11,8 @@ const rootReactElement = (
 );
 
 const target = document.getElementById('root');
-render(rootReactElement, target);
+const root = createRoot(target);
+root.render(rootReactElement);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
