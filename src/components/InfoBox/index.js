@@ -1,8 +1,10 @@
+import './style.scss';
+
 const InfoBox = () => {
     console.log('InfoBox');
     return (
         <div className="infoBox">
-            InfoBox
+            Try it free 7 days then $20/mo. thereafter
         </div>
     );
 };

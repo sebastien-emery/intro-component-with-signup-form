@@ -1,7 +1,7 @@
 // import components :
 import AppHeader from '../AppHeader';
 import AppFooter from '../AppFooter';
-import infoBox from '../infoBox';
+import InfoBox from '../InfoBox';
 
 import './style.scss'
 
@@ -10,7 +10,7 @@ const App = () => {
     <div className="App">
       <main className='main'>
         <AppHeader />
-        <infoBox />
+        <InfoBox />
       </main>
       <AppFooter />
     </div>
