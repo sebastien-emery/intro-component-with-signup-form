@@ -1,8 +1,9 @@
 .attribution {
+    margin-top: 10px;
     font-size: 11px;
     text-align: center;
 
-    + a {
-        color: hsl(228, 45%, 44%);
+    & a {
+        color: #3e52a3;
     }
 }
