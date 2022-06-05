@@ -4,7 +4,7 @@ const InfoBox = () => {
     console.log('InfoBox');
     return (
         <div className="infoBox">
-            Try it free 7 days then $20/mo. thereafter
+            <span className='infoBox__bold'>Try it free 7 days</span> then $20/mo. thereafter
         </div>
     );
 };
