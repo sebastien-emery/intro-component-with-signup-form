@@ -2,13 +2,15 @@
 import AppHeader from '../AppHeader';
 import AppFooter from '../AppFooter';
 
+import './style.scss'
+
 const App = () => {
   return (
     <div className="App">
-      <main>
+      <main className='main'>
         <AppHeader />
-        <AppFooter />
       </main>
+      <AppFooter />
     </div>
   );
 }
