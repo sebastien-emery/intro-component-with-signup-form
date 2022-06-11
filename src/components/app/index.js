@@ -11,7 +11,7 @@ const App = () => {
     <div className="App">
       <main className='main'>
         <AppHeader />
-        <div>
+        <div className='form'>
           <InfoBox />
           <Form />
         </div>

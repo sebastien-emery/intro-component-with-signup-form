@@ -23,11 +23,22 @@
     #root  {
 
         & .App {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 1440px;
 
             & .main {
                 display: flex;
+                padding: 75px 75px;
             }
         }
+    }
+
+    .form {
+        width: 50%;
+        max-width: 600px;
+        padding: 75px;
+        box-sizing: border-box;
     }
 }
