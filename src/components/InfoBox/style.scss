@@ -11,3 +11,9 @@
         font-weight: bold;
     }
 }
+
+@media screen and (min-width: 1440px) {
+    .infoBox {
+        padding: 15px 25px;
+    }
+}
