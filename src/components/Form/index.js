@@ -50,7 +50,7 @@ const Form = () => {
                     onChange={handleChangeLastName}
                 />
                 <input
-                    type="mail"
+                    type="email"
                     placeholder='Email Address'
                     className='form__mail'
                     value={mail}
