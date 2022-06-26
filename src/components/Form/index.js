@@ -19,19 +19,10 @@ const Form = () => {
         }
     }
 
-    const handleChangeFirstName = (e) => {
-        console.log('handleChangeFirstName');
-        setFirstName(e.target.value);
-    }
-    const handleChangeLastName = (e) => {
-        setLastName(e.target.value);
-    }
-    const handleChangeMail = (e) => {
-        setMail(e.target.value);
-    }
-    const handleChangePassword = (e) => {
-        setPassword(e.target.value);
-    }
+    const handleChangeFirstName = (e) => setFirstName(e.target.value);
+    const handleChangeLastName = (e) => setLastName(e.target.value);
+    const handleChangeMail = (e) => setMail(e.target.value);
+    const handleChangePassword = (e) => setPassword(e.target.value);
 
     return (
         <div className='container'>
