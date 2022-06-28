@@ -3,26 +3,16 @@ import { useState } from 'react';
 import './style.scss';
 
 const Form = () => {
-    const [firstName, setFirstName] = useState('');
-    const [lastName, setLastName] = useState('');
-    const [mail, setMail] = useState('');
-    const [password, setPassword] = useState('');
-
     const handleSubmitForm = e => {
         e.preventDefault();
-        console.log(firstName, lastName, mail, password);
-        if (!firstName || !lastName || !mail || !password) {
+        console.log(inputFields[0].firstName, inputFields[0].lastName, inputFields[0].mail, inputFields[0].password);
+        if (!inputFields[0].firstName || !inputFields[0].lastName || !inputFields[0].mail || !inputFields[0].password) {
             alert('STOP ! Remplissez les champs svp !');
         }
         else {
-            alert(`Merci ${firstName} ${lastName} pour votre inscription.`);
+            alert(`Merci ${inputFields[0].firstName} ${inputFields[0].lastName} pour votre inscription.`);
         }
     }
-
-    const handleChangeFirstName = e => setFirstName(e.target.value);
-    const handleChangeLastName = e => setLastName(e.target.value);
-    const handleChangeMail = e => setMail(e.target.value);
-    const handleChangePassword = e => setPassword(e.target.value);
 
     const [inputFields, setInputFields] = useState([
         {
@@ -33,9 +23,7 @@ const Form = () => {
         }
     ])
     const handleFormChange = (index, e) => {
-        console.log(e.target.name);
         let data = [...inputFields];
-        // console.log(data);
         data[index][e.target.name] = e.target.value;
         setInputFields(data);
     }
@@ -62,14 +50,14 @@ const Form = () => {
                                     onChange={e => handleFormChange(index, e)}
                                 />
                                 <input
-                                    type="text"
+                                    type="email"
                                     name='mail'
                                     placeholder='Email Address'
                                     value={input.mail}
                                     onChange={e => handleFormChange(index, e)}
                                 />
                                 <input
-                                    type="text"
+                                    type="password"
                                     name='password'
                                     placeholder='Password'
                                     value={input.password}
@@ -79,35 +67,6 @@ const Form = () => {
                         )
                     })
                 }
-
-
-                {/* <input
-                    type="text"
-                    placeholder='First Name'
-                    className='container__form__firstname'
-                    value={firstName}
-                    onChange={handleChangeFirstName}
-                />
-                <input
-                    type="text"
-                    placeholder='Last Name' className='container__form__lastname'
-                    value={lastName}
-                    onChange={handleChangeLastName}
-                />
-                <input
-                    type="email"
-                    placeholder='Email Address'
-                    className='form__mail'
-                    value={mail}
-                    onChange={handleChangeMail}
-                />
-                <input
-                    type="password"
-                    placeholder='Password'
-                    className='container__form__password'
-                    value={password}
-                    onChange={handleChangePassword}
-                /> */}
                 <button
                     type="submit"
                     className='container__form__submit'>Claim your free trial
