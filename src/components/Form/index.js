@@ -5,7 +5,6 @@ import './style.scss';
 const Form = () => {
     const handleSubmitForm = e => {
         e.preventDefault();
-        console.log(inputFields[0].firstName, inputFields[0].lastName, inputFields[0].mail, inputFields[0].password);
         if (!inputFields[0].firstName || !inputFields[0].lastName || !inputFields[0].mail || !inputFields[0].password) {
             alert('STOP ! Remplissez les champs svp !');
         }
