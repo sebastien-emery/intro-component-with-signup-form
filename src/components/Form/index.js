@@ -33,8 +33,11 @@ const Form = () => {
         }
     ])
     const handleFormChange = (index, e) => {
-        console.log(e.target.value);
+        console.log(e.target.name);
         let data = [...inputFields];
+        // console.log(data);
+        data[index][e.target.name] = e.target.value;
+        setInputFields(data);
     }
 
     return (
@@ -46,24 +49,28 @@ const Form = () => {
                             <div key={index}>
                                 <input
                                     type="text"
+                                    name='firstName'
                                     placeholder='First Name'
                                     value={input.firstName}
                                     onChange={e => handleFormChange(index, e)}
                                 />
                                 <input
                                     type="text"
+                                    name='lastName'
                                     placeholder='Last Name'
                                     value={input.lastName}
                                     onChange={e => handleFormChange(index, e)}
                                 />
                                 <input
                                     type="text"
+                                    name='mail'
                                     placeholder='Email Address'
                                     value={input.mail}
                                     onChange={e => handleFormChange(index, e)}
                                 />
                                 <input
                                     type="text"
+                                    name='password'
                                     placeholder='Password'
                                     value={input.password}
                                     onChange={e => handleFormChange(index, e)}
